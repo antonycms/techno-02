@@ -1,28 +1,27 @@
 <template>
   <div>
-    <div class="page-title">Home</div>
+    <div class="page-title">Contato</div>
 
     <Loading v-if="loading" />
 
-    <div v-else>{{ homeData }}</div>
+    <div v-else>{{ contato }}</div>
   </div>
 </template>
 
 <script>
 import getDataFromApi from '@/mixins/getDataFromApi';
-
 export default {
-  name: 'Home',
+  name: 'Contato',
   mixins: [getDataFromApi],
 
   data: () => ({
-    homeData: {},
+    contato: {},
     loading: true,
   }),
 
   created() {
-    this.getDataFromApi('/home').then(data => {
-      this.homeData = data;
+    this.getDataFromApi('/contato').then(data => {
+      this.contato = data;
       this.loading = false;
     });
   },
