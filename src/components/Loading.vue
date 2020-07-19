@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="loading-container">
     <span class="dot"></span>
     <span class="dot"></span>
     <span class="dot"></span>
@@ -14,12 +14,16 @@ export default {
 </script>
 
 <style scoped>
+.loading-container {
+  padding: 40px 20px;
+}
+
 .dot {
   display: inline-block;
   background-color: #4b8;
   margin: 0 4px;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   animation: dotsAnimation 0.6s cubic-bezier(0.6, 0.1, 1, 0.4) infinite alternate;
 }
