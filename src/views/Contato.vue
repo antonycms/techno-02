@@ -1,10 +1,21 @@
 <template>
   <div>
-    <div class="page-title">Contato</div>
-
     <Loading v-if="loading" />
 
-    <div v-else>{{ contato }}</div>
+    <transition>
+      <div class="container" v-if="!loading">
+        <div>
+          <h1 class="page-title">Contato</h1>
+
+          <div class="contato-content">
+            <p class="descricao">{{ contato.descricao }}</p>
+            <p><strong>Email:</strong> {{ contato.contato.email }}</p>
+            <p><strong>Telefone:</strong> {{ contato.contato.telefone }}</p>
+            <p><strong>Endereço:</strong> {{ contato.contato.endereco }}</p>
+          </div>
+        </div>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -29,9 +40,11 @@ export default {
 </script>
 
 <style scoped>
-.page-title {
-  font-size: 20px;
-  font-weight: bold;
-  color: #234;
+.contato-content .descricao {
+  margin-bottom: 30px;
+}
+
+.contato-content p {
+  margin-bottom: 10px;
 }
 </style>
