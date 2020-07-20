@@ -16,7 +16,7 @@
 
 > Projeto Techno 2, desenvolvido durante o curso de VueJS da Origamid.
 
-<!-- <img  align="center" src="./assets/techno-print.png"/> -->
+<img  align="center" src="./assets/print_home.png"/>
 
 ### 🏠 [Homepage](https://github.com/antonycms/techno-02)
 

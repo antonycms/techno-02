@@ -46,6 +46,10 @@ export default {
       this.loading = false;
     });
   },
+
+  mounted() {
+    document.title = 'Techno 2';
+  },
 };
 </script>
 
