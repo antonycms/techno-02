@@ -22,6 +22,8 @@ export default {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+
+  list-style: none;
 }
 
 html,
@@ -54,6 +56,13 @@ body,
   font-weight: bold;
   color: #234;
   margin-bottom: 30px;
+}
+
+.page-subtitle {
+  font-size: 25px;
+  font-weight: bold;
+  color: #234;
+  margin-bottom: 15px;
 }
 
 @media (max-width: 940px) {

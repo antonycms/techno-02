@@ -10,11 +10,11 @@
 
           <router-link tag="button" class="cursos-btn" to="/cursos">Cursos</router-link>
 
-          <div class="container-avaliacoes">
+          <div>
             <h2 class="page-subtitle">Avaliações</h2>
 
             <ul>
-              <li class="avaliacao" v-for="avaliacao in homeData.avaliacoes" :key="avaliacao.nome">
+              <li class="avaliacao" v-for="(avaliacao, index) in homeData.avaliacoes" :key="index">
                 <p class="avaliacao-usuario-nome">{{ avaliacao.nome }}</p>
                 <p class="avaliacao-descricao">{{ avaliacao.descricao }}</p>
               </li>
@@ -57,10 +57,6 @@ img {
   align-self: center;
 }
 
-ul {
-  list-style: none;
-}
-
 .cursos-btn {
   margin: 20px 0;
   padding: 12px;
@@ -83,13 +79,6 @@ ul {
 
 .cursos-btn:focus {
   outline: transparent;
-}
-
-.page-subtitle {
-  font-size: 25px;
-  font-weight: bold;
-  color: #234;
-  margin-bottom: 15px;
 }
 
 .avaliacao {
