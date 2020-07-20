@@ -47,7 +47,7 @@ npm install
 #
 ## Rodando o projeto
 
-inicie o server/api com:
+#### inicie o server/api com:
 ```sh
 yarn dev:api
 ```
@@ -59,7 +59,7 @@ yarn run dev:api
 <br/>
 
 
-execute a aplicação em modo de desenvolvimento:
+#### execute a aplicação em modo de desenvolvimento:
 ```sh
 yarn serve
 ```
@@ -70,7 +70,7 @@ npm run serve
 
 <br/>
 
-criar build da aplicação:
+#### criar build da aplicação:
 ```sh
 yarn build
 ```
