@@ -13,6 +13,7 @@
 
             <ul>
               <router-link
+                active-class="active-item"
                 tag="li"
                 class="card"
                 v-for="(aula, index) in curso.aulas"
@@ -25,10 +26,7 @@
           </div>
         </div>
 
-        <div>
-          <div>Video</div>
-          <router-view />
-        </div>
+        <router-view />
       </div>
     </transition>
   </div>
@@ -79,6 +77,10 @@ export default {
   box-shadow: 0.5px 1px 3px rgba(0, 0, 0, 0.4);
   border-radius: 3px;
   padding: 20px;
+  min-width: 350px;
+  max-width: 550px;
+
+  text-align: center;
 
   cursor: pointer;
   transition: all 0.5s;
@@ -94,5 +96,18 @@ export default {
   color: #234;
   opacity: 0.9;
   font-weight: bold;
+}
+
+.active-item {
+  background-color: #234;
+}
+.active-item p {
+  color: white;
+}
+
+@media (max-width: 940px) {
+  .card {
+    min-width: auto;
+  }
 }
 </style>

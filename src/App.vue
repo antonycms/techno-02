@@ -47,7 +47,7 @@ body,
 .container {
   display: grid;
   grid-template-columns: 1fr minmax(200px, 500px);
-  gap: 20px;
+  gap: 80px;
   padding: 40px 60px 0px 60px;
 }
 
