@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "concurrently -k \"npm run serve\" \"npm run dev:api\"",
     "serve": "vue-cli-service serve",
     "dev:api": "yarn json-server -w ./api/db.json",
     "build": "vue-cli-service build",
@@ -23,6 +24,7 @@
     "@vue/eslint-config-prettier": "^6.0.0",
     "babel-eslint": "^10.1.0",
     "commitizen": "^4.1.2",
+    "concurrently": "^5.2.0",
     "cz-conventional-changelog": "3.2.0",
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.1.3",

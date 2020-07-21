@@ -11,10 +11,16 @@
 
         <div>
           <ul>
-            <li class="curso" v-for="(curso, index) in cursos.cursos" :key="index">
+            <router-link
+              tag="li"
+              class="card"
+              v-for="(curso, index) in cursos.cursos"
+              :to="{ name: 'Curso', params: { cursoID: curso.id } }"
+              :key="index"
+            >
               <p class="page-subtitle">{{ curso.nome }} - {{ curso.totalAulas }} | {{ curso.horas }}</p>
               <p class="descricao">{{ curso.descricao }}</p>
-            </li>
+            </router-link>
           </ul>
         </div>
       </div>
@@ -44,10 +50,18 @@ export default {
 </script>
 
 <style scoped>
-.curso {
+.card {
   margin-bottom: 25px;
   box-shadow: 0.5px 1px 3px rgba(0, 0, 0, 0.4);
   border-radius: 3px;
   padding: 20px;
+
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.card:hover {
+  box-shadow: 0.5px 1px 5px rgba(0, 0, 0, 0.6);
+  transform: translate3d(0px, 2px, 0);
 }
 </style>
